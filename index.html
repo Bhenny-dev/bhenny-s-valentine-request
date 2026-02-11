@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine's Day</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+      @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-40px) rotate(5deg); }
+      }
+      @keyframes slow-float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+      }
+      @keyframes pulse-wave {
+        0% { transform: scale(1); opacity: 0.6; }
+        100% { transform: scale(3.5); opacity: 0; }
+      }
+      /* New drift animation for background elements: local, smooth, no flickering */
+      @keyframes gentle-drift {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        25% { transform: translate(15px, -15px) rotate(3deg); }
+        50% { transform: translate(-10px, 10px) rotate(-2deg); }
+        75% { transform: translate(10px, 15px) rotate(4deg); }
+        100% { transform: translate(0, 0) rotate(0deg); }
+      }
+
+      .animate-float { animation: float 10s ease-in-out infinite; }
+      .animate-slow-float { animation: slow-float 6s ease-in-out infinite; }
+      .animate-drift { animation: gentle-drift 15s ease-in-out infinite; }
+      
+      .wave {
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid rgba(239, 68, 68, 0.4);
+        pointer-events: none;
+      }
+      .wave-light { border-width: 1px; animation: pulse-wave 6s linear infinite; }
+      .wave-mid { border-width: 3px; animation: pulse-wave 6s linear infinite 1s; }
+      .wave-bold { border-width: 6px; animation: pulse-wave 6s linear infinite 2s; }
+      
+      .font-cursive { font-family: 'Great Vibes', cursive; }
+      .font-romantic { font-family: 'Dancing Script', cursive; }
+      .font-body { font-family: 'Quicksand', sans-serif; }
+
+      body {
+        background-color: #fff5f5;
+        overflow-x: hidden;
+        font-family: 'Quicksand', sans-serif;
+      }
+
+      .glowing-number {
+        color: #ef4444;
+        font-weight: 900;
+        text-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+        display: inline-block;
+        padding: 0 2px;
+        transition: all 0.3s ease;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar {
+        height: 8px;
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #fecaca;
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #fca5a5;
+      }
+
+      .heart-mask {
+        mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
