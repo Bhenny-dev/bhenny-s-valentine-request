@@ -47,9 +47,9 @@ const MessageCard: React.FC<MessageCardProps> = ({
     <div className="relative z-10 w-full max-w-lg mx-auto animate-in fade-in zoom-in duration-1000 px-4 flex items-center justify-center">
       <div className="relative bg-white p-4 sm:p-8 rounded-[2.5rem] shadow-[0_15px_40px_rgba(252,165,165,0.4)] border-x-4 border-t-4 border-b-[10px] border-red-50 flex flex-col items-center text-center space-y-2 sm:space-y-4 max-h-[90vh] overflow-y-auto custom-scrollbar">
         
-        <div className="flex flex-col items-center pt-2">
-          <span className="text-gray-400 text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold mb-1">A letter from</span>
-          <h2 className="text-5xl sm:text-7xl font-cursive font-bold text-red-500 drop-shadow-sm leading-none px-2 py-1">
+        <div className="flex flex-col items-center pt-4 pb-2 space-y-3">
+          <span className="text-gray-400 text-[8px] sm:text-xs uppercase tracking-[0.2em] font-extrabold">A Letter From</span>
+          <h2 className="text-5xl sm:text-7xl font-cursive font-bold text-red-500 drop-shadow-lg leading-tight px-2 break-words">
             {message.sender}
           </h2>
         </div>
