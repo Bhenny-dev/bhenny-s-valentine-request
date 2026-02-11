@@ -13,7 +13,8 @@ const FloatingIcon: React.FC<FloatingIconProps> = ({ onClick }) => {
       onClick={onClick}
     >
       {/* 3D Inflated Effect with Enhanced Depth */}
-      <div className="relative w-80 h-80 sm:w-72 sm:h-72 bg-gradient-to-b from-red-500 to-red-600 rounded-full flex items-center justify-center shadow-2xl ring-12 ring-red-100/70 border-4 border-red-400">
+      <div className="relative w-80 h-80 sm:w-72 sm:h-72 bg-gradient-to-b from-red-400 via-red-500 to-red-700 rounded-full flex items-center justify-center ring-12 ring-red-100/70 border-6 border-red-500
+        shadow-[0_40px_80px_-20px_rgba(220,38,38,0.5),0_0_0_8px_rgba(255,255,255,0.3),inset_0_-25px_40px_rgba(0,0,0,0.3),inset_0_25px_40px_rgba(255,255,255,0.6)]">
         
         {/* Bigger internal icon */}
         <svg 
@@ -29,13 +30,14 @@ const FloatingIcon: React.FC<FloatingIconProps> = ({ onClick }) => {
           <polyline points="22,6 12,13 2,6" />
         </svg>
 
-      {/* 1000+ Indicator Badge - Proportional to bigger icon */}
-        <div className="absolute top-4 right-4 bg-gradient-to-b from-red-600 to-red-700 text-white text-2xl font-black px-6 py-3 rounded-full border-4 border-white shadow-2xl animate-pulse scale-125">
+        {/* 1000+ Indicator Badge - Proportional to bigger icon */}
+        <div className="absolute top-6 right-6 bg-gradient-to-b from-red-500 via-red-600 to-red-700 text-white text-3xl font-black px-7 py-4 rounded-full border-4 border-red-800 shadow-[0_12px_25px_-8px_rgba(220,38,38,0.6),inset_0_-6px_10px_rgba(0,0,0,0.4),inset_0_6px_10px_rgba(255,255,255,0.4)] animate-pulse scale-125">
           1000+
         </div>
 
         {/* Glossy shine overlay */}
-        <div className="absolute top-8 left-8 w-16 h-8 bg-white/20 rounded-full blur-xl -rotate-45"></div>
+        <div className="absolute top-12 left-12 w-20 h-12 bg-white/30 rounded-full blur-2xl -rotate-45 opacity-80"></div>
+        <div className="absolute inset-0 rounded-full bg-gradient-to-b from-white/20 to-transparent"></div>
       </div>
       
       {/* Visual Instruction */}
