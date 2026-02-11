@@ -1,0 +1,3 @@
+module.exports=[27572,a=>{"use strict";var b=a.i(7997);function c({children:a}){return(0,b.jsx)("html",{lang:"en",children:(0,b.jsx)("body",{className:"bg-pink-50 overflow-x-hidden font-body",children:a})})}a.s(["default",()=>c,"metadata",0,{title:"Valentine's Day - Request",description:"A beautiful Valentine request experience",icons:{icon:"/favicon.ico"}},"viewport",0,{width:"device-width",initialScale:1}])}];
+
+//# sourceMappingURL=src_app_layout_tsx_cc8184fa._.js.map

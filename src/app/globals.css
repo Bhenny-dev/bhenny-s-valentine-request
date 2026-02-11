@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap');
+@import "tailwindcss";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff5f5;
+    overflow-x: hidden;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+/* Animation Keyframes */
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-40px) rotate(5deg);
+    }
+}
+
+@keyframes slow-float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse-wave {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(3.5);
+        opacity: 0;
+    }
+}
+
+@keyframes gentle-drift {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(15px, -15px) rotate(3deg);
+    }
+    50% {
+        transform: translate(-10px, 10px) rotate(-2deg);
+    }
+    75% {
+        transform: translate(10px, 15px) rotate(4deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+
+/* Animation Classes */
+
+.animate-float {
+    animation: float 10s ease-in-out infinite;
+}
+
+.animate-slow-float {
+    animation: slow-float 6s ease-in-out infinite;
+}
+
+.animate-drift {
+    animation: gentle-drift 15s ease-in-out infinite;
+}
+
+
+/* Wave Classes */
+
+.wave {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(239, 68, 68, 0.4);
+    pointer-events: none;
+}
+
+.wave-light {
+    border-width: 1px;
+    animation: pulse-wave 6s linear infinite;
+}
+
+.wave-mid {
+    border-width: 3px;
+    animation: pulse-wave 6s linear infinite 1s;
+}
+
+.wave-bold {
+    border-width: 6px;
+    animation: pulse-wave 6s linear infinite 2s;
+}
+
+
+/* Font Classes */
+
+.font-cursive {
+    font-family: 'Great Vibes', cursive;
+}
+
+.font-romantic {
+    font-family: 'Dancing Script', cursive;
+}
+
+.font-body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+/* Glowing Number Class */
+
+.glowing-number {
+    color: #ef4444;
+    font-weight: 900;
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+    display: inline-block;
+    padding: 0 2px;
+    transition: all 0.3s ease;
+}
+
+
+/* Custom Scrollbar */
+
+.custom-scrollbar::-webkit-scrollbar {
+    height: 8px;
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #fecaca;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #fca5a5;
+}
+
+
+/* Heart Mask */
+
+.heart-mask {
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
