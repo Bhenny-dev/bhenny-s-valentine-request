@@ -195,7 +195,7 @@ export default function Home() {
 
   return (
     <div 
-      className="relative w-full min-h-screen flex items-center justify-center bg-pink-50 overflow-hidden select-none"
+      className="relative w-full min-h-screen flex items-center justify-center bg-pink-50 overflow-hidden select-none py-8 sm:py-0"
       onMouseMove={handleMouseMove}
     >
       {appState === AppState.FINAL_MESSAGE && (
@@ -203,9 +203,9 @@ export default function Home() {
       )}
 
       {appState === AppState.CLOSED && (
-        <div className="flex flex-col items-center justify-center space-y-12 z-50 px-4">
-          <h1 className="text-6xl sm:text-8xl font-cursive text-red-500 drop-shadow-lg text-center animate-in fade-in slide-in-from-top duration-1000">
-            Valentine Request Messages
+        <div className="flex flex-col items-center justify-center space-y-12 sm:space-y-16 z-50 px-6 w-full">
+          <h1 className="text-5xl sm:text-8xl font-cursive text-red-500 drop-shadow-lg text-center animate-in fade-in slide-in-from-top duration-1000 leading-tight">
+            Valentine Request<br />Messages
           </h1>
           <FloatingIcon onClick={handleOpenIcon} />
         </div>

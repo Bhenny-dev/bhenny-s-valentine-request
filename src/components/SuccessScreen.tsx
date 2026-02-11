@@ -64,11 +64,11 @@ const SuccessScreen: React.FC = () => {
 
       {/* Main Content Layer */}
       {showContent && (
-        <div className="relative z-10 w-full max-w-4xl px-6 flex flex-col items-center">
+        <div className="relative z-10 w-full max-w-4xl px-5 sm:px-8 flex flex-col items-center">
           
           {view === 'celebration' ? (
-            <div className="text-center space-y-10 animate-in zoom-in fade-in duration-[1200ms]">
-              <div className="space-y-6 sm:space-y-4">
+            <div className="text-center space-y-12 animate-in zoom-in fade-in duration-[1200ms]">
+              <div className="space-y-4 sm:space-y-3">
                 <div className="text-9xl sm:text-8xl animate-bounce" style={{ animationDuration: '3s' }} role="img" aria-label="Happy emoji">🥰</div>
                 <h1 className="text-8xl sm:text-9xl font-cursive text-white drop-shadow-2xl leading-tight">
                   Yes!
@@ -78,12 +78,12 @@ const SuccessScreen: React.FC = () => {
                 </h2>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-xl p-12 rounded-[4rem] border-2 border-white/40 shadow-[0_25px_60px_rgba(0,0,0,0.3)] space-y-8">
-                <p className="text-xl sm:text-2xl font-body font-light leading-relaxed max-w-lg mx-auto text-white/95">
+              <div className="bg-white/12 backdrop-blur-xl p-10 sm:p-14 rounded-[4rem] border-2 border-white/50 shadow-[0_30px_70px_rgba(0,0,0,0.35)] space-y-9">
+                <p className="text-xl sm:text-2xl font-body font-light leading-relaxed max-w-lg mx-auto text-white/95 px-2">
                   I promise to make this Valentine's Day as beautiful as you are. 
                   Every second spent with you is a treasure.
                 </p>
-                <div className="flex justify-center gap-10">
+                <div className="flex justify-center gap-12">
                   <span className="text-4xl animate-pulse" style={{ animationDuration: '5s' }}>✨</span>
                   <span className="text-5xl animate-pulse delay-500" style={{ animationDuration: '5s' }}>❤️</span>
                   <span className="text-4xl animate-pulse delay-1000" style={{ animationDuration: '5s' }}>✨</span>
@@ -102,10 +102,10 @@ const SuccessScreen: React.FC = () => {
               </div>
             </div>
           ) : (
-            <div className="w-full flex flex-col items-center space-y-14 animate-in slide-in-from-right duration-[1200ms]">
-              <div className="text-center space-y-4">
+            <div className="w-full flex flex-col items-center space-y-16 animate-in slide-in-from-right duration-[1200ms]">
+              <div className="text-center space-y-5">
                 <h2 className="text-6xl font-cursive drop-shadow-lg text-white">Our Story</h2>
-                <p className="text-pink-100 font-romantic text-2xl sm:text-3xl tracking-wide italic drop-shadow-sm">Every moment is a memory worth keeping...</p>
+                <p className="text-pink-100 font-romantic text-2xl sm:text-3xl tracking-wide italic drop-shadow-sm px-4">Every moment is a memory worth keeping...</p>
               </div>
 
               {/* Horizontal Scroll Slideshow */}

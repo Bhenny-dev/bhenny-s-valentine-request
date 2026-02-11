@@ -44,17 +44,17 @@ const MessageCard: React.FC<MessageCardProps> = ({
   };
 
   return (
-    <div className="relative z-10 w-full max-w-lg mx-auto animate-in fade-in zoom-in duration-1000 px-4 flex items-center justify-center">
-      <div className="relative bg-white p-4 sm:p-8 rounded-[2.5rem] shadow-[0_15px_40px_rgba(252,165,165,0.4)] border-x-4 border-t-4 border-b-[10px] border-red-50 flex flex-col items-center text-center space-y-2 sm:space-y-4 max-h-[90vh] overflow-y-auto custom-scrollbar">
+    <div className="relative z-10 w-full max-w-lg mx-auto px-5 sm:px-6 animate-in fade-in zoom-in duration-1000 flex items-center justify-center">
+      <div className="relative bg-white p-6 sm:p-10 rounded-[2.5rem] shadow-[0_20px_50px_rgba(252,165,165,0.35)] border-x-4 border-t-4 border-b-[10px] border-red-50 flex flex-col items-center text-center space-y-5 sm:space-y-6 max-h-[90vh] overflow-y-auto custom-scrollbar">
         
-        <div className="flex flex-col items-center pt-6 pb-4 space-y-4">
-          <span className="text-gray-400 text-[8px] sm:text-xs uppercase tracking-[0.2em] font-extrabold">A Letter From</span>
-          <h2 className="text-5xl sm:text-7xl font-cursive font-bold text-red-500 drop-shadow-lg leading-tight px-3 break-words">
+        <div className="flex flex-col items-center pt-2 pb-2 space-y-3">
+          <span className="text-gray-400 text-[8px] sm:text-xs uppercase tracking-[0.2em] font-extrabold letter-spacing-sm">A Letter From</span>
+          <h2 className="text-5xl sm:text-7xl font-cursive font-bold text-red-500 drop-shadow-lg leading-tight px-2 break-words">
             {message.sender}
           </h2>
         </div>
 
-        <div className="bg-pink-50/50 p-6 sm:p-8 rounded-3xl border-2 border-pink-200 w-full">
+        <div className="bg-gradient-to-br from-pink-50/70 to-pink-100/40 p-7 sm:p-9 rounded-3xl border-2 border-pink-200 w-full shadow-sm">
           {message.isBhenny ? renderBhennyMessage() : (
             <p className="text-gray-700 leading-relaxed text-base sm:text-lg italic font-serif">
               "{message.content}"
@@ -63,14 +63,14 @@ const MessageCard: React.FC<MessageCardProps> = ({
         </div>
 
         {message.isBhenny && (
-          <div className="pt-4 pb-2 border-t-2 border-pink-200 w-full">
-            <h3 className="text-xl sm:text-2xl font-black text-red-600 animate-pulse tracking-wide uppercase">
+          <div className="pt-5 pb-3 border-t-2 border-pink-200 w-full">
+            <h3 className="text-xl sm:text-2xl font-black text-red-600 animate-pulse tracking-wide uppercase leading-relaxed">
               Will you be my Valentine? ❤️
             </h3>
           </div>
         )}
 
-        <div className={`flex flex-col sm:flex-row items-center pt-6 w-full gap-6 sm:gap-8 relative justify-center`}>
+        <div className={`flex flex-col sm:flex-row items-center pt-4 w-full gap-5 sm:gap-6 relative justify-center`}>
           <div className="relative flex items-center justify-center">
             {message.isBhenny && yesButtonScale > 1 && (
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
@@ -117,7 +117,7 @@ const MessageCard: React.FC<MessageCardProps> = ({
           </button>
         </div>
         
-        <div className="pt-4 pb-2 text-[10px] text-red-200 font-bold uppercase tracking-widest">
+        <div className="pt-5 pb-1 text-[10px] text-red-200 font-bold uppercase tracking-widest">
            {message.isBhenny ? "The Final Decision" : `Message ${message.id} of 1000+`}
         </div>
       </div>
