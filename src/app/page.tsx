@@ -53,16 +53,19 @@ export default function Home() {
     years: "0", months: "0", weeks: "0", days: "0", hours: "0", minutes: "0", seconds: "0"
   });
 
-  const backgroundHearts = useMemo(() => {
-    return [...Array(12)].map(() => ({
-      left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 100}%`,
-      delay: `${Math.random() * 5}s`,
-      fontSize: `${Math.random() * 20 + 20}px`
-    }));
-  }, []);
+  const [backgroundHearts, setBackgroundHearts] = useState<Array<{ left: string; top: string; delay: string; fontSize: string }>>([]);
 
   useEffect(() => {
+    // Generate background hearts only on client to avoid hydration mismatch
+    setBackgroundHearts(
+      [...Array(12)].map(() => ({
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        delay: `${Math.random() * 5}s`,
+        fontSize: `${Math.random() * 20 + 20}px`
+      }))
+    );
+
     const shuffledNames = [...SUITOR_NAMES].sort(() => 0.5 - Math.random());
     const shuffledMessages = [...DECOY_MESSAGES].sort(() => 0.5 - Math.random());
     

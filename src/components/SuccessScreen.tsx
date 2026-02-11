@@ -18,15 +18,27 @@ const SuccessScreen: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const backgroundDecorations = useMemo(() => {
-    return [...Array(24)].map((_, i) => ({
-      left: `${(i % 6) * 16 + Math.random() * 8}%`,
-      top: `${Math.floor(i / 6) * 22 + Math.random() * 8}%`,
-      fontSize: `${Math.random() * 25 + 15}px`,
-      duration: `${15 + Math.random() * 10}s`,
-      delay: `-${Math.random() * 20}s`,
-      emoji: ['❤️', '💖', '✨', '🌸', '💎'][i % 5]
-    }));
+  const [backgroundDecorations, setBackgroundDecorations] = useState<Array<{
+    left: string;
+    top: string;
+    fontSize: string;
+    duration: string;
+    delay: string;
+    emoji: string;
+  }>>([]);
+
+  useEffect(() => {
+    // Generate background decorations only on client to avoid hydration mismatch
+    setBackgroundDecorations(
+      [...Array(24)].map((_, i) => ({
+        left: `${(i % 6) * 16 + Math.random() * 8}%`,
+        top: `${Math.floor(i / 6) * 22 + Math.random() * 8}%`,
+        fontSize: `${Math.random() * 25 + 15}px`,
+        duration: `${15 + Math.random() * 10}s`,
+        delay: `-${Math.random() * 20}s`,
+        emoji: ['❤️', '💖', '✨', '🌸', '💎'][i % 5]
+      }))
+    );
   }, []);
 
   useEffect(() => {
