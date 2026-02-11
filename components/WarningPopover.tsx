@@ -22,34 +22,44 @@ const WarningPopover: React.FC<WarningPopoverProps> = ({ count, onContinue, onRe
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 backdrop-blur-sm animate-in fade-in duration-500 p-4">
       {/* 3D Inflated Pop-over Container */}
-      <div className="bg-gradient-to-b from-white to-gray-50 p-6 sm:p-8 rounded-[2rem] max-w-[320px] w-full text-center space-y-5 border border-white/50
+      <div className="relative bg-gradient-to-b from-white to-gray-50 p-4 sm:p-6 rounded-[2rem] max-w-[260px] w-full text-center space-y-3 border border-white/50
         shadow-[0_30px_60px_-12px_rgba(0,0,0,0.3),inset_0_8px_12px_rgba(255,255,255,1),inset_0_-8px_12px_rgba(0,0,0,0.05)]">
         
-        <div className="flex flex-col items-center space-y-2">
-          <div className="text-4xl animate-bounce" style={{ animationDuration: '2s' }}>⚠️</div>
-          <h2 className="text-xl font-black text-gray-800 uppercase tracking-tighter">Warning!</h2>
+        {/* Red X Close Button */}
+        <button
+          onClick={onReject}
+          className="absolute -top-3 -right-3 w-8 h-8 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg
+          shadow-lg transition-all duration-300 hover:scale-110 active:scale-95"
+          aria-label="Close"
+        >
+          ✕
+        </button>
+        
+        <div className="flex flex-col items-center space-y-1">
+          <div className="text-3xl animate-bounce" style={{ animationDuration: '2s' }}>⚠️</div>
+          <h2 className="text-lg font-black text-gray-800 uppercase tracking-tighter">Warning!</h2>
         </div>
         
-        <p className="text-gray-600 font-bold text-sm leading-relaxed px-2">
+        <p className="text-gray-600 font-bold text-xs leading-relaxed px-1">
           {currentWarning}
         </p>
         
-        <div className="flex flex-col gap-3 pt-2">
+        <div className="flex flex-col gap-2 pt-1">
           {/* Main Button with Inflated Effect */}
           <button 
             onClick={onReject}
-            className="w-full py-3 bg-gradient-to-b from-red-400 to-red-600 text-white rounded-full font-black text-sm uppercase tracking-wider
+            className="w-full py-2 bg-gradient-to-b from-red-400 to-red-600 text-white rounded-full font-black text-xs uppercase tracking-wider
             transition-all duration-300 active:scale-95
             shadow-[0_10px_20px_-5px_rgba(220,38,38,0.4),inset_0_-4px_6px_rgba(0,0,0,0.2),inset_0_4px_6px_rgba(255,255,255,0.3)]"
           >
-            REJECT IMMEDIATELY 🛑
+            REJECT 🛑
           </button>
           
           <button 
             onClick={onContinue}
-            className="w-full py-1 text-gray-400 font-bold text-[10px] hover:text-gray-600 transition-colors uppercase tracking-widest"
+            className="w-full py-1 text-gray-400 font-bold text-[9px] hover:text-gray-600 transition-colors uppercase tracking-widest"
           >
-            Continue anyway...
+            Continue...
           </button>
         </div>
       </div>
