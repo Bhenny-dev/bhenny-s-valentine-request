@@ -47,14 +47,14 @@ const MessageCard: React.FC<MessageCardProps> = ({
     <div className="relative z-10 w-full max-w-lg mx-auto animate-in fade-in zoom-in duration-1000 px-4 flex items-center justify-center">
       <div className="relative bg-white p-4 sm:p-8 rounded-[2.5rem] shadow-[0_15px_40px_rgba(252,165,165,0.4)] border-x-4 border-t-4 border-b-[10px] border-red-50 flex flex-col items-center text-center space-y-2 sm:space-y-4 max-h-[90vh] overflow-y-auto custom-scrollbar">
         
-        <div className="flex flex-col items-center pt-4 pb-2 space-y-3">
+        <div className="flex flex-col items-center pt-6 pb-4 space-y-4">
           <span className="text-gray-400 text-[8px] sm:text-xs uppercase tracking-[0.2em] font-extrabold">A Letter From</span>
-          <h2 className="text-5xl sm:text-7xl font-cursive font-bold text-red-500 drop-shadow-lg leading-tight px-2 break-words">
+          <h2 className="text-5xl sm:text-7xl font-cursive font-bold text-red-500 drop-shadow-lg leading-tight px-3 break-words">
             {message.sender}
           </h2>
         </div>
 
-        <div className="bg-pink-50/50 p-4 sm:p-6 rounded-3xl border border-pink-100 w-full">
+        <div className="bg-pink-50/50 p-6 sm:p-8 rounded-3xl border-2 border-pink-200 w-full">
           {message.isBhenny ? renderBhennyMessage() : (
             <p className="text-gray-700 leading-relaxed text-base sm:text-lg italic font-serif">
               "{message.content}"
@@ -63,14 +63,14 @@ const MessageCard: React.FC<MessageCardProps> = ({
         </div>
 
         {message.isBhenny && (
-          <div className="pt-2 border-t border-pink-100 w-full">
+          <div className="pt-4 pb-2 border-t-2 border-pink-200 w-full">
             <h3 className="text-xl sm:text-2xl font-black text-red-600 animate-pulse tracking-wide uppercase">
               Will you be my Valentine? ❤️
             </h3>
           </div>
         )}
 
-        <div className={`flex flex-col sm:flex-row items-center pt-2 w-full gap-4 sm:gap-6 relative justify-center`}>
+        <div className={`flex flex-col sm:flex-row items-center pt-6 w-full gap-6 sm:gap-8 relative justify-center`}>
           <div className="relative flex items-center justify-center">
             {message.isBhenny && yesButtonScale > 1 && (
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
@@ -83,11 +83,11 @@ const MessageCard: React.FC<MessageCardProps> = ({
               onClick={onYes}
               style={{ transform: `scale(${yesButtonScale})` }}
               className={`
-                px-10 sm:px-14 py-4 sm:py-5 bg-gradient-to-b from-red-400 to-red-600 text-white rounded-full font-black text-xl sm:text-2xl
+                px-12 sm:px-16 py-5 sm:py-6 bg-gradient-to-b from-red-400 to-red-600 text-white rounded-full font-black text-xl sm:text-2xl
                 transition-all duration-300 active:scale-90 z-20 whitespace-nowrap
-                shadow-[0_12px_24px_-8px_rgba(220,38,38,0.6),inset_0_-8px_10px_rgba(0,0,0,0.3),inset_0_8px_10px_rgba(255,255,255,0.4)]
-                hover:shadow-[0_15px_30px_-8px_rgba(220,38,38,0.7),inset_0_-8px_10px_rgba(0,0,0,0.3),inset_0_8px_10px_rgba(255,255,255,0.5)]
-                ${message.isBhenny ? 'ring-4 ring-red-100 ring-offset-2 ring-offset-white' : ''}
+                shadow-[0_15px_30px_-10px_rgba(220,38,38,0.7),inset_0_-10px_14px_rgba(0,0,0,0.3),inset_0_10px_14px_rgba(255,255,255,0.5)]
+                hover:shadow-[0_18px_36px_-12px_rgba(220,38,38,0.8),inset_0_-10px_14px_rgba(0,0,0,0.3),inset_0_10px_14px_rgba(255,255,255,0.6)]
+                ${message.isBhenny ? 'ring-5 ring-red-100 ring-offset-3 ring-offset-white' : ''}
               `}
             >
               YES!
@@ -104,12 +104,12 @@ const MessageCard: React.FC<MessageCardProps> = ({
               zIndex: 100,
               pointerEvents: 'auto',
               transition: 'all 0.1s cubic-bezier(0.17, 0.67, 0.83, 0.67)',
-              width: '140px'
+              width: '160px'
             } : { width: 'auto' }}
             className={`
-              px-10 sm:px-14 py-4 sm:py-5 bg-gradient-to-b from-gray-100 to-gray-300 text-gray-500 rounded-full font-black text-xl sm:text-2xl
+              px-12 sm:px-16 py-5 sm:py-6 bg-gradient-to-b from-gray-100 to-gray-300 text-gray-500 rounded-full font-black text-xl sm:text-2xl
               transition-all duration-300 active:scale-95
-              shadow-[0_12px_24px_-8px_rgba(0,0,0,0.1),inset_0_-8px_10px_rgba(0,0,0,0.1),inset_0_8px_10px_rgba(255,255,255,0.6)]
+              shadow-[0_15px_30px_-10px_rgba(0,0,0,0.15),inset_0_-10px_14px_rgba(0,0,0,0.1),inset_0_10px_14px_rgba(255,255,255,0.7)]
               ${message.isBhenny && isNoFleeing ? 'cursor-default' : ''}
             `}
           >
@@ -117,7 +117,7 @@ const MessageCard: React.FC<MessageCardProps> = ({
           </button>
         </div>
         
-        <div className="pt-2 text-[10px] text-red-200 font-bold uppercase tracking-widest">
+        <div className="pt-4 pb-2 text-[10px] text-red-200 font-bold uppercase tracking-widest">
            {message.isBhenny ? "The Final Decision" : `Message ${message.id} of 1000+`}
         </div>
       </div>

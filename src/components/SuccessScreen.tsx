@@ -68,17 +68,17 @@ const SuccessScreen: React.FC = () => {
           
           {view === 'celebration' ? (
             <div className="text-center space-y-10 animate-in zoom-in fade-in duration-[1200ms]">
-              <div className="space-y-4">
-                <div className="text-8xl animate-bounce" style={{ animationDuration: '4s' }}>🥰</div>
-                <h1 className="text-7xl sm:text-9xl font-cursive text-white drop-shadow-2xl">
+              <div className="space-y-6 sm:space-y-4">
+                <div className="text-9xl sm:text-8xl animate-bounce" style={{ animationDuration: '3s' }} role="img" aria-label="Happy emoji">🥰</div>
+                <h1 className="text-8xl sm:text-9xl font-cursive text-white drop-shadow-2xl leading-tight">
                   Yes!
                 </h1>
-                <h2 className="text-3xl sm:text-4xl font-romantic tracking-widest text-pink-100 drop-shadow-md">
-                  You've Made Me the Happiest Man Alive
+                <h2 className="text-2xl sm:text-4xl font-romantic tracking-widest text-pink-100 drop-shadow-md leading-relaxed">
+                  You've Made Me<br className="hidden sm:block" /> the Happiest Man Alive
                 </h2>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-xl p-10 rounded-[4rem] border border-white/30 shadow-[0_20px_50px_rgba(0,0,0,0.2)] space-y-8">
+              <div className="bg-white/10 backdrop-blur-xl p-12 rounded-[4rem] border-2 border-white/40 shadow-[0_25px_60px_rgba(0,0,0,0.3)] space-y-8">
                 <p className="text-xl sm:text-2xl font-body font-light leading-relaxed max-w-lg mx-auto text-white/95">
                   I promise to make this Valentine's Day as beautiful as you are. 
                   Every second spent with you is a treasure.
@@ -90,12 +90,12 @@ const SuccessScreen: React.FC = () => {
                 </div>
               </div>
 
-              <div className="pt-8">
+              <div className="pt-10">
                 <button 
                   onClick={handleShowStory}
-                  className="bg-white text-red-600 px-14 py-6 rounded-full font-black text-xl uppercase tracking-widest
-                  transition-all duration-300 active:scale-90 hover:scale-105
-                  shadow-[0_20px_40px_-10px_rgba(0,0,0,0.4),inset_0_-8px_10px_rgba(0,0,0,0.1),inset_0_8px_10px_rgba(255,255,255,1)]"
+                  className="bg-white text-red-600 px-16 py-7 rounded-full font-black text-lg uppercase tracking-widest
+                  transition-all duration-300 active:scale-90 hover:scale-110
+                  shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_-10px_14px_rgba(0,0,0,0.15),inset_0_10px_14px_rgba(255,255,255,1)]"
                 >
                   See Our Story Again ✨
                 </button>
@@ -146,14 +146,14 @@ const SuccessScreen: React.FC = () => {
                 ))}
               </div>
 
-              <div className="pt-6">
+              <div className="pt-8">
                 <a 
                   href="https://www.facebook.com/benlor.rivera.9"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-gradient-to-b from-white to-pink-50 text-red-600 px-20 py-6 rounded-full font-black text-2xl uppercase tracking-[0.25em]
-                  transition-all duration-300 active:scale-95 active:shadow-[0_10px_20px_-10px_rgba(0,0,0,0.5),inset_0_-4px_6px_rgba(0,0,0,0.1),inset_0_4px_6px_rgba(255,255,255,1)] hover:scale-105
-                  shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_-10px_12px_rgba(0,0,0,0.1),inset_0_10px_12px_rgba(255,255,255,1)]"
+                  className="inline-block bg-gradient-to-b from-white to-pink-50 text-red-600 px-24 py-8 rounded-full font-black text-2xl uppercase tracking-[0.25em]
+                  transition-all duration-300 active:scale-95 active:shadow-[0_15px_30px_-12px_rgba(0,0,0,0.6),inset_0_-8px_10px_rgba(0,0,0,0.15),inset_0_8px_10px_rgba(255,255,255,1)] hover:scale-110
+                  shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6),inset_0_-12px_16px_rgba(0,0,0,0.12),inset_0_12px_16px_rgba(255,255,255,1)]"
                 >
                   My Love ❤️
                 </a>

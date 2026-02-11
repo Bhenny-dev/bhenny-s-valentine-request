@@ -23,8 +23,8 @@ const WarningPopover: React.FC<WarningPopoverProps> = ({ count, onContinue, onRe
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 backdrop-blur-sm animate-in fade-in duration-500 p-4">
       {/* 3D Inflated Pop-over Container */}
-      <div className="relative bg-gradient-to-b from-white to-gray-50 p-4 sm:p-6 rounded-[2rem] max-w-[260px] w-full text-center space-y-3 border border-white/50
-        shadow-[0_30px_60px_-12px_rgba(0,0,0,0.3),inset_0_8px_12px_rgba(255,255,255,1),inset_0_-8px_12px_rgba(0,0,0,0.05)]">
+      <div className="relative bg-gradient-to-b from-white to-gray-50 p-6 sm:p-8 rounded-[2rem] max-w-[280px] w-full text-center space-y-4 border-2 border-white/70
+        shadow-[0_35px_70px_-15px_rgba(0,0,0,0.35),inset_0_10px_15px_rgba(255,255,255,1),inset_0_-10px_15px_rgba(0,0,0,0.08)]"> 
         
         {/* Red X Close Button */}
         <button
@@ -45,20 +45,20 @@ const WarningPopover: React.FC<WarningPopoverProps> = ({ count, onContinue, onRe
           {currentWarning}
         </p>
         
-        <div className="flex flex-col gap-2 pt-1">
+        <div className="flex flex-col gap-3 pt-3">
           {/* Main Button with Inflated Effect */}
           <button 
             onClick={onReject}
-            className="w-full py-2 bg-gradient-to-b from-red-400 to-red-600 text-white rounded-full font-black text-xs uppercase tracking-wider
-            transition-all duration-300 active:scale-95
-            shadow-[0_10px_20px_-5px_rgba(220,38,38,0.4),inset_0_-4px_6px_rgba(0,0,0,0.2),inset_0_4px_6px_rgba(255,255,255,0.3)]"
+            className="w-full py-3 bg-gradient-to-b from-red-400 to-red-600 text-white rounded-full font-black text-xs uppercase tracking-wider
+            transition-all duration-300 active:scale-95 hover:scale-105
+            shadow-[0_12px_25px_-7px_rgba(220,38,38,0.5),inset_0_-6px_8px_rgba(0,0,0,0.25),inset_0_6px_8px_rgba(255,255,255,0.4)]"
           >
             REJECT 🛑
           </button>
           
           <button 
             onClick={onContinue}
-            className="w-full py-1 text-gray-400 font-bold text-[9px] hover:text-gray-600 transition-colors uppercase tracking-widest"
+            className="w-full py-2 text-gray-400 font-bold text-[9px] hover:text-gray-600 transition-colors uppercase tracking-widest"
           >
             Continue...
           </button>
