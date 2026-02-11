@@ -23,8 +23,8 @@ const WarningPopover: React.FC<WarningPopoverProps> = ({ count, onContinue, onRe
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 backdrop-blur-sm animate-in fade-in duration-500 p-4">
       {/* 3D Inflated Pop-over Container */}
-      <div className="relative bg-gradient-to-b from-white to-gray-100 p-8 sm:p-10 rounded-3xl max-w-sm w-full text-center space-y-6 border-4 border-gray-200
-        shadow-2xl"> 
+      <div className="relative bg-gradient-to-b from-white to-gray-100 p-8 sm:p-10 rounded-3xl max-w-sm w-full text-center space-y-6 border-4 border-gray-300 m-3
+        shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3),inset_0_-12px_16px_rgba(0,0,0,0.08),inset_0_12px_16px_rgba(255,255,255,0.95)]"> 
         
         {/* Red X Close Button */}
         <button
@@ -49,16 +49,16 @@ const WarningPopover: React.FC<WarningPopoverProps> = ({ count, onContinue, onRe
           {/* Main Button with Inflated Effect */}
           <button 
             onClick={onReject}
-            className="w-full py-4 bg-gradient-to-b from-red-400 to-red-600 text-white rounded-full font-black text-sm uppercase tracking-wider
-            transition-all duration-300 active:scale-95 hover:scale-105 border-2 border-red-700
-            shadow-lg"
+            className="w-full py-4 m-2 bg-gradient-to-b from-red-400 via-red-500 to-red-600 text-white rounded-full font-black text-sm uppercase tracking-wider border-4 border-red-700
+            transition-all duration-300 active:scale-95 hover:scale-105
+            shadow-[0_16px_35px_-10px_rgba(220,38,38,0.5),inset_0_-10px_14px_rgba(0,0,0,0.3),inset_0_10px_14px_rgba(255,255,255,0.4)]"
           >
             REJECT 🛑
           </button>
           
           <button 
             onClick={onContinue}
-            className="w-full py-3 text-gray-500 font-bold text-xs hover:text-gray-700 transition-colors uppercase tracking-widest border-b-2 border-gray-300"
+            className="w-full py-3 m-2 text-gray-500 font-bold text-xs hover:text-gray-700 transition-colors uppercase tracking-widest border-b-4 border-gray-400"
           >
             Continue...
           </button>

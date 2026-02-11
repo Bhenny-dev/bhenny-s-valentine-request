@@ -45,7 +45,8 @@ const MessageCard: React.FC<MessageCardProps> = ({
 
   return (
     <div className="relative z-10 w-full max-w-2xl mx-auto px-4 sm:px-8 animate-in fade-in zoom-in duration-1000 flex items-center justify-center my-6">
-      <div className="relative bg-white p-8 sm:p-16 rounded-3xl shadow-2xl border-4 sm:border-8 border-red-200 flex flex-col items-center text-center space-y-8 sm:space-y-10 max-h-[90vh] overflow-y-auto custom-scrollbar">
+      <div className="relative bg-gradient-to-b from-white to-red-50/20 p-8 sm:p-16 rounded-3xl border-4 sm:border-4 border-red-300 m-3 flex flex-col items-center text-center space-y-8 sm:space-y-10 max-h-[90vh] overflow-y-auto custom-scrollbar
+        shadow-[0_20px_50px_-10px_rgba(220,38,38,0.4),inset_0_-15px_30px_rgba(0,0,0,0.08),inset_0_15px_30px_rgba(255,255,255,0.8)]">
         
         <div className="flex flex-col items-center pt-4 pb-4 space-y-4 w-full">
           <span className="text-gray-500 text-xs sm:text-sm uppercase tracking-widest font-bold letter-spacing-md">A Letter From</span>
@@ -54,7 +55,7 @@ const MessageCard: React.FC<MessageCardProps> = ({
           </h2>
         </div>
 
-        <div className="bg-gradient-to-br from-pink-100 to-pink-50 p-8 sm:p-12 rounded-3xl border-4 border-pink-300 w-full shadow-md">
+        <div className="bg-gradient-to-br from-pink-100 to-pink-50 p-8 sm:p-12 rounded-3xl border-4 border-pink-400 w-full m-3 shadow-[0_12px_30px_-8px_rgba(236,72,153,0.3),inset_0_-8px_16px_rgba(0,0,0,0.06),inset_0_8px_16px_rgba(255,255,255,0.9)]">
           {message.isBhenny ? renderBhennyMessage() : (
             <p className="text-gray-800 leading-relaxed text-lg sm:text-xl font-serif">
               "{message.content}"
@@ -83,11 +84,11 @@ const MessageCard: React.FC<MessageCardProps> = ({
               onClick={onYes}
               style={{ transform: `scale(${yesButtonScale})` }}
               className={`
-                px-12 sm:px-16 py-5 sm:py-6 bg-gradient-to-b from-red-400 to-red-600 text-white rounded-full font-black text-xl sm:text-2xl
+                px-12 sm:px-16 py-5 sm:py-6 m-3 bg-gradient-to-b from-red-400 via-red-500 to-red-600 text-white rounded-full font-black text-xl sm:text-2xl border-4 border-red-700
                 transition-all duration-300 active:scale-90 z-20 whitespace-nowrap
-                shadow-[0_15px_30px_-10px_rgba(220,38,38,0.7),inset_0_-10px_14px_rgba(0,0,0,0.3),inset_0_10px_14px_rgba(255,255,255,0.5)]
-                hover:shadow-[0_18px_36px_-12px_rgba(220,38,38,0.8),inset_0_-10px_14px_rgba(0,0,0,0.3),inset_0_10px_14px_rgba(255,255,255,0.6)]
-                ${message.isBhenny ? 'ring-5 ring-red-100 ring-offset-3 ring-offset-white' : ''}
+                shadow-[0_20px_40px_-12px_rgba(220,38,38,0.8),inset_0_-12px_16px_rgba(0,0,0,0.4),inset_0_12px_16px_rgba(255,255,255,0.5)]
+                hover:shadow-[0_24px_48px_-14px_rgba(220,38,38,0.9),inset_0_-12px_16px_rgba(0,0,0,0.4),inset_0_12px_16px_rgba(255,255,255,0.7)]
+                ${message.isBhenny ? 'ring-6 ring-red-100 ring-offset-4 ring-offset-white' : ''}
               `}
             >
               YES!
@@ -107,9 +108,9 @@ const MessageCard: React.FC<MessageCardProps> = ({
               width: '160px'
             } : { width: 'auto' }}
             className={`
-              px-12 sm:px-16 py-5 sm:py-6 bg-gradient-to-b from-gray-100 to-gray-300 text-gray-500 rounded-full font-black text-xl sm:text-2xl
+              px-12 sm:px-16 py-5 sm:py-6 m-3 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 text-gray-600 rounded-full font-black text-xl sm:text-2xl border-4 border-gray-400
               transition-all duration-300 active:scale-95
-              shadow-[0_15px_30px_-10px_rgba(0,0,0,0.15),inset_0_-10px_14px_rgba(0,0,0,0.1),inset_0_10px_14px_rgba(255,255,255,0.7)]
+              shadow-[0_15px_35px_-10px_rgba(0,0,0,0.2),inset_0_-12px_16px_rgba(0,0,0,0.15),inset_0_12px_16px_rgba(255,255,255,0.8)]
               ${message.isBhenny && isNoFleeing ? 'cursor-default' : ''}
             `}
           >

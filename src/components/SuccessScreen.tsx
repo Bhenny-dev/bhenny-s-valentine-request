@@ -90,24 +90,24 @@ const SuccessScreen: React.FC = () => {
                 </h2>
               </div>
 
-              <div className="bg-white/12 backdrop-blur-xl p-10 sm:p-14 rounded-[4rem] border-2 border-white/50 shadow-[0_30px_70px_rgba(0,0,0,0.35)] space-y-9">
-                <p className="text-xl sm:text-2xl font-body font-light leading-relaxed max-w-lg mx-auto text-white/95 px-2">
+              <div className="bg-white/15 backdrop-blur-xl p-12 sm:p-16 rounded-[4rem] border-4 border-white/70 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.4),inset_0_-15px_25px_rgba(0,0,0,0.15),inset_0_15px_25px_rgba(255,255,255,0.6)] space-y-10 mx-3 my-6">
+                <p className="text-2xl sm:text-3xl font-body font-light leading-relaxed max-w-2xl mx-auto text-white px-4">
                   I promise to make this Valentine's Day as beautiful as you are. 
                   Every second spent with you is a treasure.
                 </p>
-                <div className="flex justify-center gap-12">
-                  <span className="text-4xl animate-pulse" style={{ animationDuration: '5s' }}>✨</span>
-                  <span className="text-5xl animate-pulse delay-500" style={{ animationDuration: '5s' }}>❤️</span>
-                  <span className="text-4xl animate-pulse delay-1000" style={{ animationDuration: '5s' }}>✨</span>
+                <div className="flex justify-center gap-16">
+                  <span className="text-6xl animate-pulse" style={{ animationDuration: '5s' }}>✨</span>
+                  <span className="text-7xl animate-pulse delay-500" style={{ animationDuration: '5s' }}>❤️</span>
+                  <span className="text-6xl animate-pulse delay-1000" style={{ animationDuration: '5s' }}>✨</span>
                 </div>
               </div>
 
-              <div className="pt-10">
+              <div className="pt-14">
                 <button 
                   onClick={handleShowStory}
-                  className="bg-white text-red-600 px-16 py-7 rounded-full font-black text-lg uppercase tracking-widest
+                  className="bg-gradient-to-b from-white via-pink-50 to-white text-red-600 px-20 py-8 m-3 rounded-full font-black text-xl uppercase tracking-widest border-4 border-red-500
                   transition-all duration-300 active:scale-90 hover:scale-110
-                  shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_-10px_14px_rgba(0,0,0,0.15),inset_0_10px_14px_rgba(255,255,255,1)]"
+                  shadow-[0_20px_50px_-12px_rgba(220,38,38,0.4),inset_0_-12px_16px_rgba(0,0,0,0.1),inset_0_12px_16px_rgba(255,255,255,1)]"
                 >
                   See Our Story Again ✨
                 </button>
@@ -158,14 +158,14 @@ const SuccessScreen: React.FC = () => {
                 ))}
               </div>
 
-              <div className="pt-8">
+              <div className="pt-14">
                 <a 
                   href="https://www.facebook.com/benlor.rivera.9"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-gradient-to-b from-white to-pink-50 text-red-600 px-24 py-8 rounded-full font-black text-2xl uppercase tracking-[0.25em]
-                  transition-all duration-300 active:scale-95 active:shadow-[0_15px_30px_-12px_rgba(0,0,0,0.6),inset_0_-8px_10px_rgba(0,0,0,0.15),inset_0_8px_10px_rgba(255,255,255,1)] hover:scale-110
-                  shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6),inset_0_-12px_16px_rgba(0,0,0,0.12),inset_0_12px_16px_rgba(255,255,255,1)]"
+                  className="inline-block bg-gradient-to-b from-white via-pink-50 to-white text-red-600 px-24 py-8 m-3 rounded-full font-black text-2xl uppercase tracking-[0.25em] border-4 border-red-500
+                  transition-all duration-300 active:scale-95 hover:scale-110
+                  shadow-[0_25px_60px_-15px_rgba(220,38,38,0.4),inset_0_-12px_18px_rgba(0,0,0,0.1),inset_0_12px_18px_rgba(255,255,255,1)]"
                 >
                   My Love ❤️
                 </a>
