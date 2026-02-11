@@ -9,11 +9,11 @@ interface FloatingIconProps {
 const FloatingIcon: React.FC<FloatingIconProps> = ({ onClick }) => {
   return (
     <div 
-      className="relative cursor-pointer group animate-float transition-transform hover:scale-110 active:scale-95 z-50"
+      className="relative cursor-pointer group animate-float transition-all duration-300 hover:scale-110 active:scale-95 z-50 mx-6"
       onClick={onClick}
     >
-      {/* 3D Inflated Effect - Switched to rounded-full and increased size to w-56 h-56 */}
-      <div className="relative w-56 h-56 bg-red-500 rounded-full flex items-center justify-center shadow-[0_25px_50px_-12px_rgba(220,38,38,0.6),inset_0_-12px_20px_rgba(0,0,0,0.3),inset_0_12px_20px_rgba(255,255,255,0.4)] ring-8 ring-red-100/50">
+      {/* 3D Inflated Effect with Enhanced Depth */}
+      <div className="relative w-80 h-80 sm:w-72 sm:h-72 bg-gradient-to-b from-red-500 to-red-600 rounded-full flex items-center justify-center shadow-2xl ring-12 ring-red-100/70 border-4 border-red-400">
         
         {/* Bigger internal icon */}
         <svg 
@@ -29,8 +29,8 @@ const FloatingIcon: React.FC<FloatingIconProps> = ({ onClick }) => {
           <polyline points="22,6 12,13 2,6" />
         </svg>
 
-        {/* 1000+ Indicator Badge - Proportional to bigger icon */}
-        <div className="absolute top-2 right-2 bg-red-600 text-white text-lg font-black px-4 py-2 rounded-full border-4 border-white shadow-2xl animate-pulse scale-110">
+      {/* 1000+ Indicator Badge - Proportional to bigger icon */}
+        <div className="absolute top-4 right-4 bg-gradient-to-b from-red-600 to-red-700 text-white text-2xl font-black px-6 py-3 rounded-full border-4 border-white shadow-2xl animate-pulse scale-125">
           1000+
         </div>
 

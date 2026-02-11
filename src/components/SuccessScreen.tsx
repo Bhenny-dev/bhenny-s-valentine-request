@@ -114,10 +114,10 @@ const SuccessScreen: React.FC = () => {
               </div>
             </div>
           ) : (
-            <div className="w-full flex flex-col items-center space-y-16 animate-in slide-in-from-right duration-[1200ms]">
-              <div className="text-center space-y-5">
-                <h2 className="text-6xl font-cursive drop-shadow-lg text-white">Our Story</h2>
-                <p className="text-pink-100 font-romantic text-2xl sm:text-3xl tracking-wide italic drop-shadow-sm px-4">Every moment is a memory worth keeping...</p>
+            <div className="w-full flex flex-col items-center space-y-20 animate-in slide-in-from-right duration-[1200ms]">
+              <div className="text-center space-y-6 px-6">
+                <h2 className="text-7xl font-cursive drop-shadow-lg text-white">Our Story</h2>
+                <p className="text-pink-100 font-romantic text-3xl sm:text-4xl tracking-wide italic drop-shadow-sm">Every moment is a memory worth keeping...</p>
               </div>
 
               {/* Horizontal Scroll Slideshow */}
